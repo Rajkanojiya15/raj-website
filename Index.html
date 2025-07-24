@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Kanojiya - Developer</title>
+  <style>
+    :root {
+      --bg: black;
+      --text: white;
+      --primary: #1a73e8;
+      --nav: #222;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --nav: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.4s;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a73e8, #0d47a1);
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .typing {
+      font-size: 1.2em;
+      margin-top: 8px;
+      animation: blink 1s infinite step-end;
+      border-right: 2px solid white;
+    }
+
+    nav {
+      background: var(--nav);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: black;
+    }
+
+    .toggle-dark {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      background: black;
+      color: #333;
+      border: none;
+      padding: 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      border-left: 5px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    p, li {
+      line-height: 1.6em;
+      font-size: 1em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .social {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social a {
+      color: var(--primary);
+      font-size: 1.4em;
+      text-decoration: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0f5ab6;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @keyframes blink {
+      0% { border-color: transparent; }
+      50% { border-color: white; }
+      100% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Raj Kanojiya</h1>
+    <div class="typing" id="typing-text">Web Developer | App Developer | Game Designer</div>
+   
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#bio">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome</h2>
+    <p>Hi there! I’m Raj Kanojiya — I build functional, creative, and modern digital experiences. Whether it’s a mobile app, delivery system, survival game, or a personal portfolio, I craft projects with purpose, performance, and passion. Let’s create the future together!</p>
+  </section>
+<section> 
+  <h2>About Me</h2>
+  <img src="raj.jpg" alt="Raj Kanojiya Photo" style="width:200px; height:200px; border-radius:50%; object-fit:cover; box-shadow:0 4px 10px rgba(0,0,0,0.3); display:block; margin:auto;">
+  <p style="text-align:center;"><strong>Raj Kanojiya</strong><br>Developer from India</p>
+  <p style="margin-top:10px;">is a passionate developer from India who specializes in full-featured mobile apps, responsive websites, and interactive browser-based games. With an eye for design and a mind for logic, I create experiences that engage users and solve real-world problems.</p>
+    <ul>
+      <li>💡 <strong>Core Skills:</strong> HTML, CSS, JavaScript, Python, Java</li>
+      <li>🔧 <strong>Tools Used:</strong> Acode, Sketchware Pro, Firebase, Android Studio</li>
+      <li>📱 <strong>Top Projects:</strong> QuickDelivery App</li>
+      
+    </ul>
+    </section>
+   
+  <section>  <div class="social">
+      <a href="https://github.com/Rajkanojiya15/" target="_blank">🐙 GitHub</a>
+      <a href="https://www.instagram.com/raj_ayodhya01" target="_blank">📷 Instagram</a>
+      <a href="Rajkanojiya15122003gmail.com">📧 Gmail</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">📨 Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Raj Kanojiya | Designed ❤️
+  </footer>
+
+  <script>
+    const titles = ["Web Developer", "App Developer ", "Game Designer"];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("typing-text").textContent = titles[i];
+      i = (i + 1) % titles.length;
+    }, 3000);
+
+    function sendMessage() {
+      const name = document.getElementById("name").value;
+      alert("Thank you, " + name + "! Your message has been sent.");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }
+  </script>
+
+</body>
+</html>
